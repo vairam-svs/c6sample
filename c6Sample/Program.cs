@@ -15,7 +15,7 @@ namespace c6Sample
     {
         static void Main(string[] args)
         {
-            Person p = new Person();
+            Person p = new Person("Joe");
             p.WriteData();
             Person p1 = null;
             //Null-conditional operators 

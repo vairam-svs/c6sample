@@ -22,10 +22,13 @@ namespace c6Sample
         /// </summary>
         public decimal Salary { get; }
 
-        public Person()
+        public string Name { get; set; }
+
+        public Person(string name)
         {
             //Ctor assignment to getter-only autoprops
             Salary = 756;
+            Name = name;
         }
     }
 }
