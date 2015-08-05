@@ -10,11 +10,16 @@ namespace c6Sample
 {
     public static class ExtensionMethods
     {
+        /// <summary>
+        /// String interpolation
+        /// </summary>
+        /// <param name="p"></param>
         public static void WriteData(this Person p)
         {
-            WriteLine(p.Id);
-            WriteLine(p.Guid);
-            WriteLine(p.Salary);
+            //String interpolation
+            WriteLine($"Person Id is {p.Id}");
+            WriteLine($"Person Guid is {p.Guid}");
+            WriteLine($"Person Salary is {p.Salary}");
         }
 
         public static bool IsMaxSalaryRise(this Person p)
