@@ -16,10 +16,18 @@ namespace c6Sample
         static void Main(string[] args)
         {
             Person p = new Person();
-            WriteLine(p.Id);
-            WriteLine(p.Guid);
-            WriteLine(p.Salary);
+            p.WriteData();
+            Person p1 = null;
+            //Null-conditional operators 
+            //especially helpful when tagging an extension method that you would call
+            //helpful when you are patching a large code base and not sure if the variable is having null or not.
+            //or say if you are working with deserialized object in a api where an object property is declared nullable
+            //and would have to perform null checks and then call the method on that class.
+            bool isMaxSalary = p1?.IsMaxSalaryRise() ?? false;
+            WriteLine(isMaxSalary + "is false");
+            p1?.WriteData();//p1.WriteData() will result in null object reference
             Read();
         }
+
     }
 }
